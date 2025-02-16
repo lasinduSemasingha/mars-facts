@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Facts Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        p {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fun Facts About Planet Earth</h1>
+        <button id="factButton">Get a Fun Fact</button>
+        <p id="factDisplay"></p>
+    </div>
+    <script>
+        const facts = [
+            {
+                "fact": "Unique Blue Planet",
+                "description": "Earth is often called the 'Blue Planet' because about 71% of its surface is covered by water."
+            },
+            {
+                "fact": "Home to Life",
+                "description": "Earth is the only known planet to support life, thanks to its perfect distance from the Sun, which allows for liquid water."
+            },
+            {
+                "fact": "Atmospheric Composition",
+                "description": "The Earth's atmosphere is composed of 78% nitrogen, 21% oxygen, and trace amounts of other gases, making it suitable for life."
+            },
+            {
+                "fact": "Age of the Earth",
+                "description": "Earth is approximately 4.5 billion years old, formed from the dust and gas surrounding the young Sun."
+            },
+            {
+                "fact": "Tectonic Plates",
+                "description": "The Earth's surface is divided into tectonic plates that float on the semi-fluid mantle, causing earthquakes and volcanic activity when they move."
+            },
+            {
+                "fact": "The Tallest Mountain",
+                "description": "Mount Everest, located in the Himalayas, is the tallest mountain on Earth, standing at 8,848 meters (29,029 feet) above sea level."
+            },
+            {
+                "fact": "Deepest Point",
+                "description": "The Mariana Trench in the Pacific Ocean is the deepest part of the Earth's oceans, reaching depths of about 10,994 meters (36,070 feet)."
+            },
+            {
+                "fact": "Earth's Rotation",
+                "description": "Earth rotates on its axis once every 24 hours, which is responsible for the cycle of day and night."
+            },
+            {
+                "fact": "Seasons Change",
+                "description": "The tilt of the Earth's axis (about 23.5 degrees) causes the changing seasons as it orbits the Sun."
+            },
+            {
+                "fact": "Biodiversity",
+                "description": "Earth is home to millions of species of plants and animals, with new species being discovered regularly, showcasing its rich biodiversity."
+            }
+        ];
+
+        document.getElementById('factButton').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            const fact = facts[randomIndex];
+            document.getElementById('factDisplay').innerText = `${fact.fact}: ${fact.description}`;
+        });
+    </script>
+</body>
+</html>
